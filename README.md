@@ -1,9 +1,5 @@
 # Porter: Optimizing Delivery for the Digital Diner 📊🚚
 
-![Python](https://shields.io)
-![Pandas](https://shields.io)
-![Data Analytics](https://shields.io)
-
 ## 📌 Project Overview
 **Porter Delivery** is a fast-growing platform in the food delivery sector facing a critical business bottleneck: **plummeting customer satisfaction scores due to rising delivery times** across several key markets. 
 
