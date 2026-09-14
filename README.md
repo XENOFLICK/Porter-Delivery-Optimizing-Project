@@ -1,18 +1,18 @@
-# Porter: Optimizing Delivery for the Digital Diner 📊🚚
+# Porter: Optimizing Delivery for the Digital Diner 
 
-## 📌 Project Overview
+##  Project Overview
 **Porter Delivery** is a fast-growing platform in the food delivery sector facing a critical business bottleneck: **plummeting customer satisfaction scores due to rising delivery times** across several key markets. 
 
 This project aims to unpack the underlying bottlenecks in the food delivery supply chain, identify specific inefficiencies across restaurant categories and delivery markets, and deliver data-driven recommendations to stabilize operational performance and protect market share.
 
 ---
 
-## 🎯 Problem Statement
+##  Problem Statement
 The primary objective of this project is to analyze the complex web of operational and environmental factors influencing delivery times. By identifying high-variance markets, inefficient ordering protocols, and supply-demand mismatches, this analysis uncovers actionable strategies to **minimize delivery durations while protecting and improving overall service quality.**
 
 ---
 
-## 👥 Stakeholders & Requirements
+##  Stakeholders & Requirements
 
 ### Stakeholders
 *   **Internal:** Operations Team, Marketing Department, Customer Service, and Logistics/Fleet Management.
@@ -26,7 +26,7 @@ The primary objective of this project is to analyze the complex web of operation
 
 ---
 
-## 💻 Tools & Technologies Used
+##  Tools & Technologies Used
 *   **Programming Language:** Python 3.8+
 *   **Data Manipulation:** Pandas, NumPy
 *   **Data Visualization:** Matplotlib, Seaborn
@@ -35,7 +35,7 @@ The primary objective of this project is to analyze the complex web of operation
 
 ---
 
-## 📂 Data Dictionary & Source
+##  Data Dictionary & Source
 The underlying dataset is sourced from [Kaggle - Porter Delivery Time Estimation](https://kaggle.com). Each row represents a single unique delivery transaction.
 
 | Feature Column | Data Type | Description |
@@ -55,7 +55,7 @@ The underlying dataset is sourced from [Kaggle - Porter Delivery Time Estimation
 
 ---
 
-## 🛠️ Data Preprocessing & Workflow
+##  Data Preprocessing & Workflow
 1.  **Missing Value Treatment:** Evaluated and handled structural missingness in key fields (`market_id`, `actual_delivery_time`, `store_primary_category`, and courier supply metrics) using context-aware imputation or targeted drops.
 2.  **Temporal Type Casting:** Converted string timestamps (`created_at`, `actual_delivery_time`) to correct `datetime64` types.
 3.  **Feature Engineering:** 
@@ -66,7 +66,7 @@ The underlying dataset is sourced from [Kaggle - Porter Delivery Time Estimation
 
 ---
 
-## 💡 Key Insights & Findings
+##  Key Insights & Findings
 *   **Supply & Demand Mismatches:** Peak ordering hours exhibit sharp delivery time spikes not just because of order volume, but due to highly unoptimized active-to-busy courier ratios (`total_busy_partners` vs `total_onshift_partners`).
 *   **High-Variance Categories:** Specific high-prep cuisine types under `store_primary_category` systematically delay couriers at the point of pickup, driving outliers in total delivery durations.
 *   **Operational Inefficiencies:** Delivery times vary significantly by `order_protocol`. Digital app protocols outperform traditional legacy protocols, indicating a need to transition partners away from slow ingestion methods.
@@ -74,14 +74,14 @@ The underlying dataset is sourced from [Kaggle - Porter Delivery Time Estimation
 
 ---
 
-## ⚠️ Challenges Faced
+##  Challenges Faced
 *   **Data Integrity & Null Values:** Dealing with massive missing data windows in real-time courier tracking metrics (`total_onshift_partners`) without introducing synthetic bias to regression workflows.
 *   **Outlier Distortions:** Extreme delivery durations skewed standard mathematical means. Employing strict statistical filtering (e.g., IQR methods) was critical to stabilizing performance views.
 *   **High Cardinality:** Managing hundreds of distinct restaurant classifications required meticulous feature aggregation to maintain clean visualizations and robust operational buckets.
 
 ---
 
-## 🚀 Strategic Recommendations
+##  Strategic Recommendations
 Based on the analysis, the following structural improvements are proposed for Porter Delivery:
 
 1.  **Dynamic Courier Dispatching:** Implement a predictive driver-allocation framework that automatically scales up `total_onshift_partners` roughly 30 to 45 minutes ahead of identified historical peak hour windows.
